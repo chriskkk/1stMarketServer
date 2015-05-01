@@ -11,7 +11,9 @@
 	<properties>
 		<version.spring>3.2.13.RELEASE</version.spring>
 		<version.jersey>1.19</version.jersey>
-		<version.jackson>1.9.13</version.jackson>
+		<version.jsoup>1.6.3</version.jsoup>
+		<version.jedis>2.7.0</version.jedis>
+		<version.swift>3.0.4</version.swift>
 	</properties>
 
 	<modules>
@@ -67,6 +69,11 @@
 			<version>${version.jersey}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.sun.jersey.contribs</groupId>
 			<artifactId>jersey-spring</artifactId>
 			<version>${version.jersey}</version>
@@ -95,18 +102,35 @@
 		</dependency>
 		<!-- jersey rest end -->
 
-		<!-- jackson begin -->
+		<!-- jedis begin -->
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>${version.jackson}</version>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${version.jedis}</version>
+		</dependency>
+		<!-- jedis end -->
+		
+		<!-- jsoup begin -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${version.jsoup}</version>
+		</dependency>
+		<!-- jsoup end -->
+		
+		<!-- swift begin -->
+		<dependency>
+			<groupId>com.woorea</groupId>
+			<artifactId>swift-client</artifactId>
+			<version>${version.swift}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${version.jackson}</version>
+			<groupId>com.woorea</groupId>
+			<artifactId>keystone-client</artifactId>
+			<version>${version.swift}</version>
 		</dependency>
-		<!-- jackson end -->
+		<!-- swift end -->
+		
 	</dependencies>
 
 </project>
