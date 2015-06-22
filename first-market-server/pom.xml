@@ -21,8 +21,7 @@
 		<module>first-market-server-dao</module>
 		<module>first-market-server-service</module>
 		<module>first-market-server-web</module>
-        <module>first-market-server-task</module>
-    </modules>
+    	</modules>
 
 	<dependencies>
 		<!-- spring begin -->
