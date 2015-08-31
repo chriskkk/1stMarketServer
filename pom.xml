@@ -21,6 +21,7 @@
         <module>first-market-server-dao</module>
         <module>first-market-server-service</module>
         <module>first-market-server-web</module>
+        <module>first-market-server-task</module>
     </modules>
 
     <dependencies>
@@ -131,6 +132,12 @@
         </dependency>
         <!-- swift end -->
 
+        <!-- =geinyr-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.1.1</version>
+        </dependency>
     </dependencies>
 
 </project>
