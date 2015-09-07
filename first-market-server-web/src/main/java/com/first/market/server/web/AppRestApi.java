@@ -1,5 +1,6 @@
 package com.first.market.server.web;
 
+import com.first.market.server.domain.App;
 import com.sun.jersey.spi.resource.Singleton;
 
 import javax.ws.rs.GET;
@@ -29,24 +30,4 @@ public class AppRestApi {
         return appList;
     }
 
-    class App {
-        String id;
-        String name;
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
 }

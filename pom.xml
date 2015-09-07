@@ -9,19 +9,21 @@
     <packaging>pom</packaging>
 
     <properties>
-        <version.spring>3.2.2.RELEASE</version.spring>
-        <version.jersey>1.19</version.jersey>
-        <version.jsoup>1.6.3</version.jsoup>
-        <version.jedis>2.7.0</version.jedis>
-        <version.swift>3.0.4</version.swift>
+        <spring.version>3.2.14.RELEASE</spring.version>
+        <jersey.version>1.19</jersey.version>
+        <jsoup.version>1.6.3</jsoup.version>
+        <jedis.version>2.7.0</jedis.version>
+        <swift.version>3.0.4</swift.version>
+        <quartz.version>1.6.1</quartz.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
     </properties>
 
     <modules>
         <module>first-market-server-domain</module>
         <module>first-market-server-dao</module>
         <module>first-market-server-service</module>
-        <module>first-market-server-web</module>
         <module>first-market-server-task</module>
+        <module>first-market-server-web</module>
     </modules>
 
     <dependencies>
@@ -29,32 +31,37 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>${version.spring}</version>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <!-- spring end -->
 
@@ -62,22 +69,22 @@
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-server</artifactId>
-            <version>${version.jersey}</version>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-client</artifactId>
-            <version>${version.jersey}</version>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-json</artifactId>
-            <version>${version.jersey}</version>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.jersey.contribs</groupId>
             <artifactId>jersey-spring</artifactId>
-            <version>${version.jersey}</version>
+            <version>${jersey.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
@@ -107,7 +114,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>${version.jedis}</version>
+            <version>${jedis.version}</version>
         </dependency>
         <!-- jedis end -->
 
@@ -115,7 +122,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>${version.jsoup}</version>
+            <version>${jsoup.version}</version>
         </dependency>
         <!-- jsoup end -->
 
@@ -123,20 +130,34 @@
         <dependency>
             <groupId>com.woorea</groupId>
             <artifactId>swift-client</artifactId>
-            <version>${version.swift}</version>
+            <version>${swift.version}</version>
         </dependency>
         <dependency>
             <groupId>com.woorea</groupId>
             <artifactId>keystone-client</artifactId>
-            <version>${version.swift}</version>
+            <version>${swift.version}</version>
         </dependency>
         <!-- swift end -->
 
-        <!-- =geinyr-->
+        <!-- quartz begin -->
         <dependency>
-            <groupId>org.quartz-scheduler</groupId>
+            <groupId>org.opensymphony.quartz</groupId>
             <artifactId>quartz</artifactId>
-            <version>2.1.1</version>
+            <version>${quartz.version}</version>
+        </dependency>
+        <!-- quartz end -->
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons-collections.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

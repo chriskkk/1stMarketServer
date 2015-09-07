@@ -5,8 +5,4 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
        default-autowire="byName">
 
-    <!-- <import resource="spring/spring-config-dao.xml"/>
-    <import resource="spring/spring-config-service.xml"/>
-    <import resource="spring/spring-config-rest.xml"/>
-    <import resource="spring/spring-config-dao.xml"/> -->
 </beans>
